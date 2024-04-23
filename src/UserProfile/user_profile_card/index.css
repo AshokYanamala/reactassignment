@@ -1,0 +1,22 @@
+.user-profile-card {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile-info {
+    font-size: 16px;
+  }
+  
+  .profile-info h2 {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+  
+  .profile-info p {
+    margin: 8px ;
+  }
+  

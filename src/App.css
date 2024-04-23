@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  height: 70vh;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.form,
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form {
+  flex-basis: 48%;
+  padding: 20px;
+}
+
+.form-title,
+.card-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.card {
+  flex-basis: 48%;
+}
+
+.card-title {
+  padding: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.counter-card-wrapper {
+  margin-top: 20px;
+}
+
+.profile-info {
+  padding: 20px;
+}
+
+.profile-info p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.navbar {
+  background-color: #4a5568;
+  padding: 10px;
+}
+
+.navbar ul {
+  display: flex;
+}
+
+.navbar li {
+  margin-right: 10px;
+  list-style-type: none;
+}
+
+.navbar a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 8px 12px;
+  border: 1px solid blueviolet;
+    border-radius: 4px;
+}
+
+.navbar a:hover{
+  background-color: blueviolet;
+}
