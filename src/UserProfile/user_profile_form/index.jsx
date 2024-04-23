@@ -79,6 +79,7 @@ const UserProfileForm = ({ onSubmit }) => {
           placeholder="Enter your Hobbies"
           value={hobbies}
           onChange={(event) => setHobbies(event.target.value)}
+          required
         />
       </div>
       <button type="submit">Submit</button>

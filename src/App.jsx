@@ -13,7 +13,6 @@ import UserProfileCard from "./UserProfile/user_profile_card";
 
 function App() {
   const [profile, setProfile] = useState(null);
-  // const [isClicked, setIsClicked] = useState("");
 
   const handleSubmit = (data) => {
     setProfile(data);
@@ -25,27 +24,17 @@ function App() {
         <nav className="navbar flex justify-center items-center">
           <ul className="flex space-x-4">
             <li>
-              <NavLink
-                // onClick={() => setIsClicked("counter")}
-                to="/counter"
-                activeClassName="active-link"
-                className="btn btn-primary"
-              >
+              <NavLink to="/counter" className="btn btn-primary">
                 Counter
               </NavLink>
             </li>
             <li>
-              <NavLink
-                to="/user-profile"
-                activeClassName="active-link"
-                className="btn btn-primary"
-              >
+              <NavLink to="/user-profile" className="btn btn-primary">
                 User Profile
               </NavLink>
             </li>
           </ul>
         </nav>
-        {/* Add margin to the counter card */}
         <div className="counter-card-wrapper">
           <Routes>
             <Route path="/counter" element={<ReactCounter />} />
@@ -56,22 +45,15 @@ function App() {
                   <h1 className="title">User Profile Form</h1>
                   <div className="content">
                     <div className="form">
-                      {/* <h2 className="form-title">Profile Form</h2> */}
                       <UserProfileForm onSubmit={handleSubmit} />
                     </div>
                     <div className="card">
-                      {profile && (
-                        <>
-                          {/* <h2 className="card-title">User Profile</h2> */}
-                          <UserProfileCard {...profile} />
-                        </>
-                      )}
+                      {profile && <UserProfileCard {...profile} />}
                     </div>
                   </div>
                 </div>
               }
             />
-            {/* Redirect to home if path is not found */}
             <Route path="*" element={<Navigate to="/home" />} />
           </Routes>
         </div>
