@@ -11,8 +11,8 @@ const UserProfileForm = ({ onSubmit }) => {
     event.preventDefault();
 
     // Validation checks
-    const namereg = /^[a-zA-Z]+$/;
-    const phonereg = /^\d{10}$/;
+    const namereg = /^[a-zA-Z0-9&_\\.\s-]+$/;
+    const phonereg = /^(([+91 |+92 ]{4}|[+91|+92]{3})[0-9]{10})$/;
     const emailreg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
     if (!namereg.test(name)) {
