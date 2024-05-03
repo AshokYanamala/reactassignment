@@ -3,9 +3,6 @@
     margin: 0 auto;
     
   }
-  
-
-  
   .form-group label {
     display: block;
     font-weight: bold;
@@ -29,3 +26,24 @@
     width: 100%;
   }
   
+  .PhoneInputCountryIconImg{
+     width: 30px;
+     height: 30px;
+     margin-right: 10px;
+     margin-top: 10px;
+  }
+
+  
+  
+  .phone-input-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  .phone-input-country {
+    display: flex;
+    align-items: center;
+    margin-left: 16px;
+  }
+ 

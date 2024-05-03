@@ -1,5 +1,7 @@
+//
 import React, { useState } from "react";
-import "./index.css"; // Import CSS file
+import PhoneInput from "react-phone-number-input";
+import "./index.css";
 
 const UserProfileForm = ({ onSubmit }) => {
   const [name, setName] = useState("");
@@ -12,7 +14,7 @@ const UserProfileForm = ({ onSubmit }) => {
 
     // Validation checks
     const namereg = /^[a-zA-Z0-9&_\\.\s-]+$/;
-    const phonereg = /^(([+91 |+92 ]{4}|[+91|+92]{3})[0-9]{10})$/;
+    const phonereg = /^\+\d{1,3}\s?\d{5,10}$/;
     const emailreg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
     if (!namereg.test(name)) {
@@ -20,15 +22,17 @@ const UserProfileForm = ({ onSubmit }) => {
       return;
     }
     if (!phonereg.test(phone)) {
-      alert("Please enter a valid Indian/Pakistani phone number.");
+      alert("Please enter a valid phone number.");
       return;
     }
     if (!emailreg.test(email)) {
       alert("Please enter a valid email address.");
       return;
     }
+
     // Submit the form
     onSubmit({ name, email, phone, hobbies });
+
     // Reset form fields
     setName("");
     setEmail("");
@@ -62,12 +66,14 @@ const UserProfileForm = ({ onSubmit }) => {
       </div>
       <div className="form-group">
         <label htmlFor="phone">Phone Number</label>
-        <input
-          type="tel"
+        <PhoneInput
           id="phone"
+          title="Phone number"
           placeholder="Enter your Phone Number"
           value={phone}
-          onChange={(event) => setPhone(event.target.value)}
+          onChange={setPhone}
+          countryCallingCodeEditable={false}
+          international
           required
         />
       </div>
